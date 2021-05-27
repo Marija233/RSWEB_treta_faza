@@ -40,12 +40,12 @@ namespace Project.Models
                 roleResult = await RoleManager.CreateAsync(new IdentityRole("Teacher"));
             }
 
-            user = await UserManager.FindByEmailAsync("anne@mvcuniversity.com");
+            user = await UserManager.FindByEmailAsync("anne@mvcmovie.com");
             if (user == null)
             {
                 var User = new ProjectUser();
-                User.Email = "anne@mvcuniversity.com";
-                User.UserName = "anne@mvcuniversity.com";
+                User.Email = "anne@mvcmovie.com";
+                User.UserName = "anne@mvcmovie.com";
                 User.TeacherId = 1;
                 string userPWD = "Anne123";
                 IdentityResult chkUser = await UserManager.CreateAsync(User, userPWD);
@@ -58,12 +58,12 @@ namespace Project.Models
             {
                 roleResult = await RoleManager.CreateAsync(new IdentityRole("Student"));
             }
-            user = await UserManager.FindByEmailAsync("marija@mvcuniversity.com");
+            user = await UserManager.FindByEmailAsync("marija@mvcmovie.com");
             if (user == null)
             {
                 var User = new ProjectUser();
-                User.Email = "marija@mvcuniversity.com";
-                User.UserName = "marija@mvcuniversity.com";
+                User.Email = "marija@mvcmovie.com";
+                User.UserName = "marija@mvcmovie.com";
                 User.StudentId = 1;
                 string userPWD = "Marija123";
                 IdentityResult chkUser = await UserManager.CreateAsync(User, userPWD);
